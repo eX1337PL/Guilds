@@ -1,3 +1,36 @@
+#======================================================================#
+#+-+----------------------------------------------------------------+-+#
+#                           Guild v0.1.5 Build                         #
+#      Authors: DragoPL & xBaq                                         #
+#      Skript Version: 2.1                                             #
+#+-+----------------------------------------------------------------+-+#
+#======================================================================#
+
+# -- Config Start -- #
+options:
+	
+#Maksymalna ilosc czlonkow w gildii (wpisz -1 aby wylaczyc):
+	members-max: 20
+
+#Czy wlaczyc platnosc przedmiotami za gildie:
+	payitem-for-guild: true
+
+#Przedmioty potrzebne na zalozenie gildii (wpisz 'none' aby wylaczyc):
+	payitem.1: 64 diamond
+	payitem.2: 64 emerald
+	payitem.3: 64 tnt
+	payitem.4: 64 golden apple
+	payitem.5: 64 lead
+	payitem.6: 16 ender pearl
+	payitem.7: none
+	payitem.8: none
+	payitem.9: none
+	payitem.10: none
+	payitem.11: none
+	payitem.12: none
+
+# -- Config End -- #
+
 # -- Console Version Alert -- #
 on script load:
 	set {_ver} to skript version
@@ -8,5 +41,3 @@ on script load:
 		send "&6* &fGuilds wymaga Skript v%{_need}%! Na serwerze znaduje sie niepoprawna wersja Pluginu Skript(v%{_ver}%)!" to the console
 # -- Enf Of Console Version Aler -- #
 
-
-	
