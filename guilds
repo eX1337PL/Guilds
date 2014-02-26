@@ -1,1 +1,7 @@
-variables
+on script load:
+	set {_ver} to skript version
+	set {_need} to "2.1"
+	if {_ver} is {_need}:
+		send "&6* &7Guilds wymaga Skript v%{_need}%! Na serwerze znaduje sie poprawna wersja!" to the console
+	if {_ver} is not {_need}:
+		send "&6* &7Guilds wymaga Skript v%{_need}%! Na serwerze znaduje sie niepoprawna wersja Pluginu Skript(v%{_ver}%)!" to the console
