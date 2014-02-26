@@ -2,6 +2,19 @@ on script load:
 	set {_ver} to skript version
 	set {_need} to "2.1"
 	if {_ver} is {_need}:
-		send "&6* &7Guilds wymaga Skript v%{_need}%! Na serwerze znaduje sie poprawna wersja!" to the console
+		send "&6* &fGuilds wymaga Skript v%{_need}%! Na serwerze znaduje sie poprawna wersja!" to the console
 	if {_ver} is not {_need}:
-		send "&6* &7Guilds wymaga Skript v%{_need}%! Na serwerze znaduje sie niepoprawna wersja Pluginu Skript(v%{_ver}%)!" to the console
+		send "&6* &fGuilds wymaga Skript v%{_need}%! Na serwerze znaduje sie niepoprawna wersja Pluginu Skript(v%{_ver}%)!" to the console
+	set {guilds-ver} to "0.1.5"
+	if {guilds.data.create(0.1.5)} is false:
+		generate folder named "Guilds"
+		send "&6* &c[GUILDS] &fData folder generated successfully!" to console
+		set {guilds.data.create(0.1.5)} to true
+	if {guilds.config.create(0.1.5)} is not true:
+		set {guilds.config.create(0.1.5)} to true
+		download file from "https://github.com/eX1337PL/Guilds/blob/master/Guilds/config.yml" to "scripts/Guilds" "config.yml"
+		send "&6* &c[GUILDS] &fConfig file generated successfully!" to console
+	if {guilds.messages.create(0.1.5)} is not true:
+		download file from "https://github.com/eX1337PL/Guilds/blob/master/Guilds/messages.yml" to "scripts/Guilds" "messages.yml"
+		send "&6* &c[GUILDS] &fMessages file generated successfully!" to console
+		set {guilds.messages.create(0.1.5)} to true
